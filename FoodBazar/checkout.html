@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>cart</title>
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- header section start -->
+    <header class="header">
+        <section class="flex">
+            <a href="home.html" class="logo">yum-yum 😋</a>
+            <!-- navigation section -->
+            <nav id="navbar">
+                <a href="home.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="menu.html">Menu</a>
+                <a href="orders.html">Orders</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="icons">
+                <a href="search.html"><i class="fas fa-search"></i></a>
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i><span>(3)</span></a>
+                <div id="user-btn" class="fas fa-user"></div>
+                <div id="menu-btn" class="fas fa-bars" onclick="myfunction();"></div>
+            </div>
+
+            <!-- profile section  -->
+            <div class="profile">
+
+                <p class="name">Sanshodh sarkate</p>
+                <div class="flex">
+                    <a href="profile.html" class="btn">profile</a>
+                    <a href="#" class="delete-btn">log out</a>
+                </div>
+                <p class="account"><a href="login.html">login</a> or <a href="register.html">register</a></p>
+            </div>
+        </section>
+    </header>
+    <!-- header section End -->
+    <div class="heading">
+        <h3>checkout</h3>
+        <p><a href="home.html">home</a><span> / checkout</span></p>
+    </div>
+
+    <section class="checkout">
+        <h1 class="title">order summary</h1>
+
+        <form action="" method="post">
+
+
+            <div class="cart-items">
+                <h3>cart items</h3>
+                <p><span class="name">main dish 01</span><span class="price">$3</span></p>
+                <p><span class="name">delicious pizza 02</span><span class="price">$3</span></p>
+                <p><span class="name">delicious dessert-02</span><span class="price">$3</span></p>
+                <p class="grand-total"><span class="name">grand total :</span><span class="price">$9</span></p>
+                <a href="cart.html" class="btn">view cart</a>
+
+            </div>
+
+            <div class="user-info">
+                <h3>your info</h3>
+                <p><i class="fas fa-user"></i><span> Mehul Manani</span></p>
+                <p><i class="fas fa-phone"></i><span> 1234567890</span></p>
+                <p><i class="fas fa-envelope"></i><span> mehulmanani@gmail.com</span></p>
+                <a href="update_profile.html" class="btn">update info</a>
+                <h3>delivery address</h3>
+                <p><i class="fas fa-map-marker-alt"></i><span> flat no. 1, bullding no. 1, jadeshwar west, bharuch, india
+                        - 400104</span></p>
+                <a href="update_address.html" class="btn">update_address</a>
+                <select name="method" class="box" required>
+                    <option value="cash on delivery">cash on delivery</option>
+                    <option value="credit-card">credit card</option>
+                    <option value="paytm">paytm</option>
+
+                </select>
+
+                <input type="submit" value="place order" class="btn" style="width:100%; background-color: var(--red); color: var(--white);">
+
+
+            </div>
+
+        </form>
+
+    </section>
+
+
+
+    <!-- footer section start  -->
+    <footer class="footer">
+        <section class="gride">
+            <div class="box">
+                <img src="img/email-icon.png" alt="">
+                <h3>our email</h3>
+                <a href="mailito:sanshodhsarkate@gmail.com">sanshodhsarkate@gmail.com</a>
+                <a href="mailito:riteshpatil@gmail.com">riteshpatil@gmail.com</a>
+            </div>
+            <div class="box">
+                <img src="img/clock-icon.png" alt="">
+                <h3>opening hours</h3>
+                <p>00:07am to 00:10pm</p>
+            </div>
+            <div class="box">
+                <img src="img/map-icon.png" alt="">
+                <h3>our address<h3>
+                        <a href="#">surat, india-394221</a>
+            </div>
+            <div class="box">
+                <img src="img/phone-icon.png" alt="">
+                <h3>our Number</h3>
+                <a href="tel:1234567890">123-456-7890</a>
+                <a href="tel:1112223333">111-222-3333</a>
+            </div>
+        </section>
+        <div class="credit">created by <span>mr. web designers</span>| all rights reserved!</div>
+
+    </footer>
+    <!-- footer section End  -->
+
+
+
+
+
+
+
+    <!-- custom js file link -->
+    <script>function myfunction() {
+            var nav = document.getElementById('navbar');
+            navbar.classList.toggle('show');
+            profile.classList.remove('show');
+        }
+        // profile sectioin js
+        profile = document.querySelector('.profile');
+        document.querySelector('#user-btn').onclick = () => {
+
+            profile.classList.toggle('show');
+            navbar.classList.remove('show');
+        }
+
+        window.onscroll = () => {
+            navbar.classList.remove('show');
+            profile.classList.remove('show');
+        } 
+    </script>
+</body>
+
+</html>

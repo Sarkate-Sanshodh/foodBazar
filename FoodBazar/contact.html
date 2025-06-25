@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>contect</title>
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- header section start -->
+    <header class="header">
+        <section class="flex">
+            <a href="home.html" class="logo">yum-yum 😋</a>
+            <!-- navigation section -->
+            <nav id="navbar">
+                <a href="home.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="menu.html">Menu</a>
+                <a href="orders.html">Orders</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="icons">
+                <a href="search.html"><i class="fas fa-search"></i></a>
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i><span>(3)</span></a>
+                <div id="user-btn" class="fas fa-user"></div>
+                <div id="menu-btn" class="fas fa-bars" onclick="myfunction();"></div>
+            </div>
+
+            <!-- profile section  -->
+            <div class="profile">
+
+                <p class="name">Sanshodh sarkate</p>
+                <div class="flex">
+                    <a href="profile.html" class="btn">profile</a>
+                    <a href="#" class="delete-btn">log out</a>
+                </div>
+                <p class="account"><a href="login.html">login</a> or <a href="register.html">register</a></p>
+            </div>
+        </section>
+    </header>
+    <!-- header section End -->
+
+    <div class="heading">
+        <h3>contact us</h3>
+        <p><a href="home.html">home</a><span> / contact</span></p>
+    </div>
+
+    <!-- contact section starts  -->
+
+    <section class="contact">
+
+        <div class="row">
+
+            <div class="image">
+                <img src="img/contact-img.svg" alt="">
+            </div>
+
+            <form action="" method="post">
+                <h3>tell us something</h3>
+                <input type="text" name="name" maxlength="50" class="box"
+                 placeholder="enter your name" required>
+                <input type="number" name="number" min="0" max="9999999999" 
+                 class="box" placeholder="enter your number" required onkeypress="if (this.value.length == 10) return false;">
+                <input type="email" name="email" maxlength="50" class="box"
+                 placeholder="enter your email" required>
+                <textarea name="msg" class="box" required placeholder="enter your message" maxlength="500" cols="30" rows="10"></textarea>
+                <input type="submit" value="send massage" name="send" class="btn" style = "margin: 8px;">
+
+
+
+
+            </form>
+        </div>
+
+    </section>
+
+
+
+    <!-- contact section Ends -->
+
+
+    <!-- footer section start  -->
+    <footer class="footer">
+        <section class="gride">
+            <div class="box">
+                <img src="img/email-icon.png" alt="">
+                <h3>our email</h3>
+                <a href="mailito:sanshodhsarkate@gmail.com">sanshodhsarkate@gmail.com</a>
+                <a href="mailito:riteshpatil@gmail.com">riteshpatil@gmail.com</a>
+            </div>
+            <div class="box">
+                <img src="img/clock-icon.png" alt="">
+                <h3>opening hours</h3>
+                <p>00:07am to 00:10pm</p>
+            </div>
+            <div class="box">
+                <img src="img/map-icon.png" alt="">
+                <h3>our address<h3>
+                        <a href="#">surat, india-394221</a>
+            </div>
+            <div class="box">
+                <img src="img/phone-icon.png" alt="">
+                <h3>our Number</h3>
+                <a href="tel:1234567890">123-456-7890</a>
+                <a href="tel:1112223333">111-222-3333</a>
+            </div>
+        </section>
+        <div class="credit">created by <span>mr. web designers</span>| all rights reserved!</div>
+
+    </footer>
+    <!-- footer section End  -->
+
+
+
+
+
+
+
+    <!-- custom js file link -->
+    <script>function myfunction() {
+            var nav = document.getElementById('navbar');
+            navbar.classList.toggle('show');
+            profile.classList.remove('show');
+        }
+        // profile sectioin js
+        profile = document.querySelector('.profile');
+        document.querySelector('#user-btn').onclick = () => {
+
+            profile.classList.toggle('show');
+            navbar.classList.remove('show');
+        }
+
+        window.onscroll = () => {
+            navbar.classList.remove('show');
+            profile.classList.remove('show');
+        } 
+    </script>
+</body>
+
+</html>
